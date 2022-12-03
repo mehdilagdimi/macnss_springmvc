@@ -1,0 +1,5 @@
+com\mehdilagdimi\macnss_spring_mvc\Dispatcher.class
+com\mehdilagdimi\macnss_spring_mvc\config\AppConfig.class
+com\mehdilagdimi\macnss_spring_mvc\entity\Folder.class
+com\mehdilagdimi\macnss_spring_mvc\config\DispatcherConfig.class
+com\mehdilagdimi\macnss_spring_mvc\repository\FolderRepository.class
