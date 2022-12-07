@@ -32,6 +32,8 @@ public class Consultation {
 
     private double sumConsultationRefund = 0;
 
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST) @JoinColumn(name = "folder_id", referencedColumnName = "id")
+    Folder folder;
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
     @JoinColumn(name = "conjoint_id", referencedColumnName = "id")
     Conjoint conjoint;
@@ -40,6 +42,4 @@ public class Consultation {
     @OneToMany(mappedBy = "consultation", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Document> listDocuments;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST) @JoinColumn(name = "folder_id", referencedColumnName = "id")
-    Folder folder;
 }

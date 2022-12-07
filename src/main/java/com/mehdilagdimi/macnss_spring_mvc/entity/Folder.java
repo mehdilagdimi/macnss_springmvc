@@ -25,6 +25,11 @@ public class Folder {
 //    private double refundsSum;
     public double totalRefund = 0;
 
+
+    @ManyToOne @JoinColumn(name = "patient_mtricule", referencedColumnName = "matricule")
+    Patient patient;
+
+
     @OneToMany(mappedBy = "folder", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     List<Consultation> consultationList = new ArrayList<>();
 

@@ -11,9 +11,10 @@ public class Person {
     long id;
 
     private String fullname;
-
+    @Column(nullable = false)
     private String email;
 
+    @Column(nullable = false, length = 512)
     private String password;
 
     public Person(){

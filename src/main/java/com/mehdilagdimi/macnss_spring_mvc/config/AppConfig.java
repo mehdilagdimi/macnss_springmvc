@@ -2,7 +2,9 @@ package com.mehdilagdimi.macnss_spring_mvc.config;
 
 
 import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.PersistenceContext;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -29,12 +31,15 @@ import java.util.Properties;
 @EnableTransactionManagement
 public class AppConfig {
 
+
     @Autowired
     private Environment environment;
 
 
+
     @Bean
-    public EntityManagerFactory entityManagerFactory() {
+    @Qualifier(value = "entityManagerFactory")
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource());
         em.setPackagesToScan(new String[] { "com.mehdilagdimi.macnss_spring_mvc.entity"});
@@ -42,16 +47,15 @@ public class AppConfig {
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
         em.setJpaProperties(hibernateProperties());
-        return em.getObject();
+        return em;
     }
 
     @Bean
-    public JpaTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
+    public JpaTransactionManager transactionManager(final EntityManagerFactory entityManagerFactory) {
 //        HibernateTransactionManager transactionManager = new HibernateTransactionManager();
         JpaTransactionManager transactionManager = new JpaTransactionManager();
 //        transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
         transactionManager.setEntityManagerFactory(entityManagerFactory);
-
 
         return transactionManager;
     }

@@ -2,11 +2,22 @@ package com.mehdilagdimi.macnss_spring_mvc.entity;
 
 import com.mehdilagdimi.macnss_spring_mvc.base.Person;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Patient extends Person {
 
+
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long matricule;
+
+
+
+    @OneToMany(mappedBy = "patient")
+    List<Conjoint> conjointList;
+
+    @OneToMany(mappedBy = "patient")
+    List<Folder> foldersList;
 }
