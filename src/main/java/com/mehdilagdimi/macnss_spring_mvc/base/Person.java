@@ -57,4 +57,9 @@ public class Person {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public boolean isValid() {
+        return id != 0 && fullname != null && email != null;
+    }
+
 }

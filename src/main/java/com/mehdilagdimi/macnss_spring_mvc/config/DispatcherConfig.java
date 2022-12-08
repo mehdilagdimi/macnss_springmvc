@@ -14,7 +14,7 @@ import org.springframework.web.servlet.view.JstlView;
 @ComponentScan(basePackages = "com.mehdilagdimi.macnss_spring_mvc")
 public class DispatcherConfig implements WebMvcConfigurer {
 
-    private static String baseUrl = "http://localhost:8080/MaCNSS_Spring_MVC_war_exploded/macnss";
+    private static String baseUrl = "http://localhost:8080/MaCNSS_Spring_MVC_war_exploded/";
 
 
     @Bean(name = "baseUrl")
@@ -22,11 +22,12 @@ public class DispatcherConfig implements WebMvcConfigurer {
         return baseUrl;
     }
 
-    @Bean(name = "viewResolver")
+    @Bean("jspViewResolver")
     public InternalResourceViewResolver getViewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setViewClass(JstlView.class);
         viewResolver.setPrefix("/WEB-INF/views/");
+//        viewResolver.setPrefix("/views/");
         viewResolver.setSuffix(".jsp");
         return viewResolver;
     }

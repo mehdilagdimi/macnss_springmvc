@@ -13,7 +13,8 @@ import java.util.NoSuchElementException;
 @Service
 public class AgentService {
     @Autowired
-    AgentRepository agentRepository;
+    private AgentRepository agentRepository;
+
 
     @Transactional
     public List<Agent> getAgent() {
@@ -37,4 +38,8 @@ public class AgentService {
         agentRepository.deleteById(id);
     }
 
+//    @Autowired
+//    public AgentRepository getAgentRepository() {
+//        return agentRepository;
+//    }
 }
