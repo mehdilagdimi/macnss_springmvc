@@ -42,6 +42,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.taglibs:taglibs-standard-impl:1.2.5" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.eclipse:yasson:3.0.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: jakarta.json.bind:jakarta.json.bind-api:3.0.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: jakarta.json:jakarta.json-api:2.1.0" level="project" />
@@ -79,8 +80,8 @@
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:3.0.0" level="project" />
     <orderEntry type="library" name="Maven: jakarta.annotation:jakarta.annotation-api:2.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:2.0.2" level="project" />
-    <orderEntry type="library" name="Maven: jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0" level="project" />
-    <orderEntry type="library" name="Maven: jakarta.el:jakarta.el-api:5.0.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: jakarta.el:jakarta.el-api:5.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:6.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-web:6.0.2" level="project" />
     <orderEntry type="library" name="Maven: io.micrometer:micrometer-observation:1.10.0" level="project" />
@@ -97,8 +98,9 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: jakarta.enterprise:jakarta.enterprise.lang-model:4.0.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: jakarta.authentication:jakarta.authentication-api:3.0.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: jakarta.security.enterprise:jakarta.security.enterprise-api:3.0.0" level="project" />
-    <orderEntry type="library" name="Maven: jakarta.servlet:jakarta.servlet-api:6.0.0" level="project" />
-    <orderEntry type="library" name="Maven: jakarta.servlet.jsp:jakarta.servlet.jsp-api:3.1.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: jakarta.servlet:jakarta.servlet-api:6.0.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: jakarta.servlet.jsp:jakarta.servlet.jsp-api:3.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1" level="project" />
     <orderEntry type="library" name="Maven: com.mysql:mysql-connector-j:8.0.31" level="project" />
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.19.4" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven.plugins:maven-deploy-plugin:2.7" level="project" />
